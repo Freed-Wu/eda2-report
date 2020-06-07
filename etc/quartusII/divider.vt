@@ -1,0 +1,33 @@
+`include "divider.v"
+`timescale 1 ns / 1 ns
+
+module main;
+
+parameter DLY = 1e9 * 1.0 / 48e6;
+parameter RST = 2e9;
+
+reg clk = 0;
+reg rst = 0;
+
+initial begin
+	#(RST / 2) rst = ~rst;
+	#(RST * 1) $finish;
+end
+
+always begin
+	#(DLY / 2) clk = ~clk;
+end
+
+wire d48k, d96k, d24M, d48M;
+
+divider divider_1
+(
+	.clk(clk), .d48k(d48k), .d96k(d96k), .d24M(d24M), .d48M(d48M)
+);
+
+initial begin
+	$monitor("%t: %b, %b, %b, %b, %b, ", $realtime, clk, d48k, d96k, d24M, d48M);
+end
+
+endmodule
+

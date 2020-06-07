@@ -1,0 +1,15 @@
+TeX: \font\scm="SimSun" at 10pt
+TeX: \largemusicsize\scm
+Title: 两只老虎
+Composer: Gustav Mahler
+Width: 180mm
+Style: Singer Piano
+Bars/Line: 4
+Flats: 1
+Meter: 4/4
+Space: 0 0 6
+
+U: Dm  ~  C          | B%  ~  G7        | A7              | Dm             |
+   d  e    f   g     | ( b4d a8 ) a2        | a4  d    d   a    | ( a4d g8 )  g2  |
+L:1. 两 只 老 虎 两 只 老 虎 跑 得 快 ～
+
